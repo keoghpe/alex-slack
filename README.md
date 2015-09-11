@@ -5,6 +5,10 @@ An [Alex](http://alexjs.com/) bot for slack that uses [slack-node-client](https:
 Set up:
 
 ```
-export ALEX_TOKEN="xoxb-10582780021-4q3dhUv4wWdoFFKyesWXkxPU"
+cd node_modules/slack-client/
+npm install
+cd ../../
+npm install
+export ALEX_TOKEN="your-bot-key"
 node index.js
 ```
