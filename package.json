@@ -10,6 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "alex": "^1.1.0",
-    "slack-client": "git+https://github.com/slackhq/node-slack-client.git"
+    "slack-client": "^1.4.1"
   }
 }
