@@ -1,0 +1,11 @@
+{
+  "name": "Alex-Slack",
+  "description": "An Alex integration for Slack",
+  "repository": "https://github.com/keoghpe/alex-slack",
+  "keywords": ["node", "slack", "alex"],
+  "env": {
+    "ALEX_TOKEN": {
+      "description": "Your Slack bot integration token (obtainable at https://my.slack.com/services/new/bot)"
+    }
+  }
+}

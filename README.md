@@ -9,3 +9,7 @@ npm install
 export ALEX_TOKEN="your-bot-key"
 node index.js
 ```
+
+##Deploy to Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
