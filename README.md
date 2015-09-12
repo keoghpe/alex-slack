@@ -4,13 +4,6 @@ An [Alex](http://alexjs.com/) bot for slack that uses [slack-node-client](https:
 
 ![](./images/demo.png)
 
-##Deploy to Heroku
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-
-
-
 ## Getting Started
 1. Create a new [bot integration](https://my.slack.com/services/new/bot)
 1. Follow the steps to deploy the bot to Heroku or run it locally
