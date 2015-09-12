@@ -2,6 +2,7 @@ var Slack, autoMark, autoReconnect, slack, token;
 
 Slack = require('slack-client');
 Alex = require('alex');
+var http = require('http');
 
 token = process.env.ALEX_TOKEN;
 
@@ -85,3 +86,8 @@ slack.on('error', function(error) {
 });
 
 slack.login();
+
+// Heroku requires the process to bind to this port within 60 seconds or it is killed
+http.createServer(function(req, res) {
+  res.end('ALEX_SLACK_BOT');
+}).listen(process.env.PORT || 5000)
