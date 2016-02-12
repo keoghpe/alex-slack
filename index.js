@@ -64,11 +64,19 @@ slack.on('message', function(message) {
 
     if(a_messages.length) {
       for (var i = 0; i < a_messages.length; i++) {
-        response += Alex(text).messages[i].reason + '\n';
+        response += a_messages[i].reason + '\n';
       };
 
-      channel.send(response);
-      return console.log("@" + slack.self.name + " responded with \"" + response + "\"");
+      slack.openDM(message.user, function(error, dmResult) {
+        if (error) {
+          return console.log("@" + slack.self.name + " could not respond. " + error);
+        }
+        var dm = slack.getDMByID(dmResult.channel.id);
+        dm.send(response);
+        dm.close();
+
+        return console.log("@" + slack.self.name + " responded privately with \"" + response + "\"");
+      });
     }
   } else {
     typeError = type !== 'message' ? "unexpected type " + type + "." : null;
